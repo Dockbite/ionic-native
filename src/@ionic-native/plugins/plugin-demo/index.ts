@@ -10,15 +10,7 @@
  *
  */
 import { Injectable } from '@angular/core';
-import {
-  Plugin,
-  Cordova,
-  CordovaProperty,
-  CordovaInstance,
-  InstanceProperty,
-  IonicNativePlugin,
-} from '@ionic-native/core';
-import { Observable } from 'rxjs';
+import { Plugin, Cordova, IonicNativePlugin } from '@ionic-native/core';
 
 /**
  * @name Plugin Demo
@@ -43,18 +35,13 @@ import { Observable } from 'rxjs';
  */
 @Plugin({
   pluginName: 'PluginDemo',
-  plugin: 'cordova-plugin-plugindemo', // npm package name, example: cordova-plugin-camera
-  pluginRef: 'PluginDemo', // the variable reference to call the plugin, example: navigator.geolocation
+  plugin: 'com.dockbite.plugindemo', // npm package name, example: cordova-plugin-camera
+  pluginRef: 'cordova.plugins.PluginDemo', // the variable reference to call the plugin, example: navigator.geolocation
   repo: 'https://github.com/Dockbite/cordova-plugin-plugindemo.git', // the github repository URL for the plugin
-  platforms: ['android'], // Array of platforms supported, example: ['Android', 'iOS']
+  platforms: ['Android'], // Array of platforms supported, example: ['Android', 'iOS']
 })
 @Injectable()
 export class PluginDemo extends IonicNativePlugin {
-  /**
-   * This function does something
-   * @param arg1 {string} Some param to configure something
-   * @return {Promise<any>} Returns a promise that resolves when something happens
-   */
   @Cordova()
   coolMethod(arg1: string): Promise<any> {
     return; // We add return; here to avoid any IDE / Compiler errors
