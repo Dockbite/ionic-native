@@ -46,9 +46,7 @@ import { Observable } from 'rxjs';
   plugin: 'cordova-plugin-plugindemo', // npm package name, example: cordova-plugin-camera
   pluginRef: 'PluginDemo', // the variable reference to call the plugin, example: navigator.geolocation
   repo: 'https://github.com/Dockbite/cordova-plugin-plugindemo.git', // the github repository URL for the plugin
-  install: '', // OPTIONAL install command, in case the plugin requires variables
-  installVariables: [], // OPTIONAL the plugin requires variables
-  platforms: ['Android'], // Array of platforms supported, example: ['Android', 'iOS']
+  platforms: ['android'], // Array of platforms supported, example: ['Android', 'iOS']
 })
 @Injectable()
 export class PluginDemo extends IonicNativePlugin {
